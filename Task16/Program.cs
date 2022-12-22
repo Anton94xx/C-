@@ -6,7 +6,14 @@
 // 25, 5 -> да
 // 8,9 -> нет
 
-Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number % 7 == 0 && number % 23 == 0) Console.WriteLine("Число делится на 23 и на 7");
-else Console.WriteLine("Число не еделится");
+Console.WriteLine("Введите первое число");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int number2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(IsSquare(number1, number2) ? "да" : "нет");
+
+bool IsSquare(int number1, int number2)
+{
+   return number1 % number2 == 0 || number2 % number1 == 0;
+}
